@@ -63,25 +63,3 @@
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0b1f3a,50:1f4e79,100:8ecae6&height=130&section=footer&text=The%20sky%20is%20not%20the%20limit.%20It%27s%20the%20runway.&fontSize=20&fontColor=ffffff&animation=twinkling&fontAlignY=68" width="100%"/>
 
 </div>
-<h2 align="center">🐍 NEON GREEN CONTRIBUTION SNAKE</h2>
-
-<p align="center">
-  <picture>
-    <source
-      media="(prefers-color-scheme: dark)"
-      srcset="https://raw.githubusercontent.com/Sourabhsingh-Whiteeagle/Sourabhsingh-Whiteeagle/output/github-snake-dark.svg">
-
-    <source
-      media="(prefers-color-scheme: light)"
-      srcset="https://raw.githubusercontent.com/Sourabhsingh-Whiteeagle/Sourabhsingh-Whiteeagle/output/github-snake.svg">
-
-    <img
-      src="https://raw.githubusercontent.com/Sourabhsingh-Whiteeagle/Sourabhsingh-Whiteeagle/output/github-snake.svg"
-      width="100%"
-      alt="Animated Neon Green GitHub Snake">
-  </picture>
-</p>
-
-<h3 align="center">🟢 CODE • BUILD • CONTRIBUTE • REPEAT</h3>
-
-<h3 align="center">🟢 CODE. BUILD. CONTRIBUTE. REPEAT.</h3>
