@@ -63,7 +63,6 @@
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0b1f3a,50:1f4e79,100:8ecae6&height=130&section=footer&text=The%20sky%20is%20not%20the%20limit.%20It%27s%20the%20runway.&fontSize=20&fontColor=ffffff&animation=twinkling&fontAlignY=68" width="100%"/>
 
 </div>
----
 
 <h2 align="center">🐍 Contribution Activity</h2>
 
