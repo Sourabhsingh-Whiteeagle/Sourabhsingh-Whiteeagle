@@ -63,6 +63,32 @@
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0b1f3a,50:1f4e79,100:8ecae6&height=130&section=footer&text=The%20sky%20is%20not%20the%20limit.%20It%27s%20the%20runway.&fontSize=20&fontColor=ffffff&animation=twinkling&fontAlignY=68" width="100%"/>
 
 </div>
-<p align="center">
-  <img src="./snake.svg" alt="Green animated snake" width="100%">
-</p>
+name: Generate Snake Animation
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Generate Green Snake
+        uses: Platane/snk@v3
+        with:
+          github_user_name: Sourabhsingh-Whiteeagle
+          outputs: |
+            dist/github-snake.svg?color_snake=%2339FF14&color_dots=%23e8f5e9,%23a5d6a7,%234caf50,%232e7d32,%231b5e20
+            dist/github-snake-dark.svg?color_snake=%2339FF14&color_dots=%230b1f14,%230e4429,%23006d32,%2326a641,%2339d353
+
+      - name: Deploy Snake Animation
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          publish_branch: output
