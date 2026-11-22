@@ -64,17 +64,22 @@
 
 </div>
 ---
+---
 
 <h2 align="center">🐍 Contribution Activity</h2>
 
 <p align="center">
-  <img
-    src="https://raw.githubusercontent.com/Sourabhsingh-Whiteeagle/Sourabhsingh-Whiteeagle/output/github-contribution-grid-snake.svg"
-    alt="Sourabhsingh's GitHub Contribution Snake"
-    width="100%"
-  />
+  <picture>
+    <source media="(prefers-color-scheme: dark)"
+      srcset="https://raw.githubusercontent.com/Sourabhsingh-Whiteeagle/Sourabhsingh-Whiteeagle/output/github-snake-dark.svg">
+
+    <source media="(prefers-color-scheme: light)"
+      srcset="https://raw.githubusercontent.com/Sourabhsingh-Whiteeagle/Sourabhsingh-Whiteeagle/output/github-snake.svg">
+
+    <img alt="GitHub Contribution Snake"
+      src="https://raw.githubusercontent.com/Sourabhsingh-Whiteeagle/Sourabhsingh-Whiteeagle/output/github-snake.svg"
+      width="100%">
+  </picture>
 </p>
 
-<h3 align="center">
-  🚀 Consistency Builds Excellence.
-</h3>
+<h3 align="center">🚀 Consistency Builds Excellence.</h3>
