@@ -63,18 +63,35 @@
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0b1f3a,50:1f4e79,100:8ecae6&height=130&section=footer&text=The%20sky%20is%20not%20the%20limit.%20It%27s%20the%20runway.&fontSize=20&fontColor=ffffff&animation=twinkling&fontAlignY=68" width="100%"/>
 
 </div>
----
+name: Generate Snake Animation
 
-<h2 align="center">🐍 Contribution Activity</h2>
+on:
+  schedule:
+    - cron: "0 */12 * * *"   # runs every 12 hours
+  workflow_dispatch:          # lets you run it manually
+  push:
+    branches: [main]
 
-<p align="center">
-  <img
-    src="https://raw.githubusercontent.com/Sourabhsingh-Whiteeagle/Sourabhsingh-Whiteeagle/output/github-snake.svg"
-    alt="GitHub Contribution Snake"
-    width="100%"
-  />
-</p>
+permissions:
+  contents: write
 
-<h3 align="center">🚀 Consistency Builds Excellence.</h3>
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Generate snake SVGs
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-snake-dark.svg?color_snake=%2300ff88&color_dots=%23161b22,%230e4429,%23006d32,%2326a641,%2339d353
+            dist/github-snake.svg?color_snake=%23059669&color_dots=%23ebedf0,%239be9a8,%2340c463,%2330a14e,%23216e39
 
-y Builds Excellence.</h3>
+      - name: Push to output branch
+        uses: crazy-max/ghaction-github-pages@v3.1.0
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
