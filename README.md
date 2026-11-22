@@ -64,7 +64,6 @@
 
 </div>
 ---
----
 
 <h2 align="center">🐍 Contribution Activity</h2>
 
